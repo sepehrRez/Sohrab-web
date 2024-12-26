@@ -1,7 +1,6 @@
 // *****************************************************
 // <!-- Section 1 : Import Dependencies -->
 // *****************************************************
-
 const express = require('express'); // To build an application server or API
 const app = express();
 const handlebars = require('express-handlebars');
@@ -11,7 +10,7 @@ const path = require('path');
 const axios = require('axios'); // To make HTTP requests from our server.
 
 // *****************************************************
-// <!-- Section 2 : Connect to DB -->
+// <!-- Section 2 -->
 // *****************************************************
 app.use(express.static(__dirname + '/public')); //allows express to access local css, javascript, etc in public file
 
@@ -33,6 +32,7 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.json()); // specify the usage of JSON for parsing request body.
+
 
 
 
@@ -61,7 +61,9 @@ app.get('/projects', (req, res) => {
   res.render('pages/projects');
 });
 
-
+app.get('/publications', (req, res) => {
+  res.render('pages/publications');
+});
 
 // *****************************************************
 // <!-- Section 5 : Start Server-->
