@@ -12,7 +12,7 @@ Follow these steps to set up and run the project locally:
    ```
 
 2. **Create the `.env` File**  
-   Navigate to the `projectSource code` folder and create a `.env` file with the following contents:
+    create a `.env` file with the following contents:
    ```plaintext
    # Database credentials
    POSTGRES_USER="postgres"
